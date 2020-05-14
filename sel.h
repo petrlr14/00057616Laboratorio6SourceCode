@@ -56,6 +56,12 @@ Matrix createLocalK(int element,mesh &m){
     Matrix K,A,B,Bt,At;
 
     D = calculateLocalD(element,m);
+
+    if(D == 0){
+        cout << "\n!---CATASTROPHIC FAILURE---!\n";
+        exit(EXIT_FAILURE);
+    }
+
     Ae = calculateLocalArea(element,m);
 
     zeroes(A,2);
@@ -91,7 +97,14 @@ Vector createLocalb(int element,mesh &m){
     float Q = m.getParameter(HEAT_SOURCE),J;
     J = calculateLocalJ(element,m);
 
-    b.push_back(0); b.push_back(Q*J*0.5); b.push_back(Q*J*0.5);
+    if(J == 0){
+        cout << "\n!---CATASTROPHIC FAILURE---!\n";
+        exit(EXIT_FAILURE);
+    }
+
+    b.push_back(0); 
+    b.push_back(Q*J*0.5); 
+    b.push_back(Q*J*0.5);
 
     return b;
 }

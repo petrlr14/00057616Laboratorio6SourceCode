@@ -38,7 +38,7 @@ void correctConditions(int n,condition *list,int *indices){
                 list[j].setNode1(list[j].getNode1()-1);
     }
 }
-
+    
 void addExtension(char *newfilename,char *filename, string extension){
     int ori_length = strlen(filename);
     int ext_length = extension.length();
