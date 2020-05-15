@@ -102,9 +102,9 @@ Vector createLocalb(int element,mesh &m){
         exit(EXIT_FAILURE);
     }
 
-    b.push_back(0); 
-    b.push_back(Q*J*0.5); 
-    b.push_back(Q*J*0.5);
+    b.push_back(Q*J*(1/6)); 
+    b.push_back(Q*J*(1/6)); 
+    b.push_back(Q*J*(1/6));
 
     return b;
 }
