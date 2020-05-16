@@ -71,7 +71,7 @@ Matrix createLocalK(int element,mesh &m){
     transpose(A,At);
     transpose(B,Bt);
 
-    productRealMatrix(k*Ae/D,productMatrixMatrix(Bt,productMatrixMatrix(At,productMatrixMatrix(A,B,2,2,3),2,2,3),3,2,3),K);
+    productRealMatrix(k*Ae/(D*D),productMatrixMatrix(Bt,productMatrixMatrix(At,productMatrixMatrix(A,B,2,2,3),2,2,3),3,2,3),K);
 
     return K;
 }
