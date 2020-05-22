@@ -18,10 +18,7 @@ int main(int argc, char *argv[])
     Vector b;
     Vector T;
 
-    cout << "IMPLEMENTACI"<<char(224)<<"N DEL M"<<char(144)<<"TODO DE LOS ELEMENTOS FINITOS\n"
-         << "\t- TRANSFERENCIA DE CALOR\n" << "\t- 2 DIMENSIONES\n"
-         << "\t- FUNCIONES DE FORMA LINEALES\n" << "\t- PESOS DE GALERKIN\n"
-         << "*********************************************************************************\n\n";
+    cout << "METODOS DE LOS ELEMENTOS FINITOS EN DOS DIMENSIONES CON FUNCIONES DE FORMA LINEALES Y PESOS DE GALERKIN - 00057616" << endl;
 
     mesh m;
     leerMallayCondiciones(m,filename);
